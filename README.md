@@ -6,9 +6,9 @@ This guide aims to help users who have encountered the "disk quota exceeded" err
 
 The following error may be encountered:
 
-\`\`\`
+```
 OSError: [Errno 122] Disk quota exceeded
-\`\`\`
+```
 
 This error may indicate that the disk space allocated to the user or group has been exceeded.
 
