@@ -6,9 +6,9 @@ This guide aims to help users who have encountered the "disk quota exceeded" err
 
 The following error may be encountered:
 
-```
+\`\`\`
 OSError: [Errno 122] Disk quota exceeded
-```
+\`\`\`
 
 This error may indicate that the disk space allocated to the user or group has been exceeded.
 
@@ -18,25 +18,25 @@ This error may indicate that the disk space allocated to the user or group has b
 
 Run the following command to check your current disk quota and usage:
 
-\```bash
+\`\`\`bash
 quota
-\```
+\`\`\`
 
 ### Step 2: Find Files with Wrong Group Ownership
 
 Use this command to find files that may have the wrong group ownership:
 
-\```bash
+\`\`\`bash
 lfs find ~/projects/*/ -group $USER
-\```
+\`\`\`
 
 ### Step 3: Change Ownership of Files
 
 If you find files with incorrect ownership, you can change their ownership with the following command:
 
-\```bash
+\`\`\`bash
 chown -h -R $USER:your_group_name -- ~/projects/your_project_path/
-\```
+\`\`\`
 
 Replace `your_group_name` and `your_project_path` with the appropriate values.
 
@@ -46,10 +46,10 @@ Replace `your_group_name` and `your_project_path` with the appropriate values.
 
 Set the correct permissions for your project directories:
 
-\```bash
+\`\`\`bash
 chmod 2770 ~/projects/def-professor/
 chmod 2700 ~/projects/def-professor/$USER
-\```
+\`\`\`
 
 ### Step 5: Verify the Changes
 
